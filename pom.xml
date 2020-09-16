@@ -1,0 +1,385 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>com.channelsoft</groupId>
+  <artifactId>agentProxy2</artifactId>
+  <version>2.0.2.4</version>
+  <description>CCOD_CLI</description>
+  <packaging>war</packaging>
+
+ <repositories> 
+		<repository>
+			<id>nexus_thirdpart</id>
+			<url>http://10.130.24.36:8383/nexus/content/repositories/thirdparty/</url>
+		</repository>
+		<repository>
+			<id>nexus_snapshots</id>
+			<url>http://10.130.24.36:8383/nexus/content/repositories/snapshots/</url>
+		</repository>
+	</repositories>
+	<dependencies>
+		<dependency>
+			<groupId>ice</groupId>
+			<artifactId>ice</artifactId>
+			<version>1.0.0</version>
+		</dependency>
+
+
+		<!--spring mvc -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-webmvc</artifactId>
+			<version>3.1.2.RELEASE</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-jdbc</artifactId>
+			<version>3.1.3.RELEASE</version>
+		</dependency>
+		<dependency>
+			<groupId>org.codehaus.jackson</groupId>
+			<artifactId>jackson-core-asl</artifactId>
+			<version>1.9.0</version>
+		</dependency>
+		<dependency>
+			<groupId>org.codehaus.jackson</groupId>
+			<artifactId>jackson-mapper-asl</artifactId>
+			<version>1.9.0</version>
+		</dependency>
+
+		<!-- Apache commons -->
+		<dependency>
+			<groupId>commons-beanutils</groupId>
+			<artifactId>commons-beanutils</artifactId>
+			<version>1.8.2</version>
+		</dependency>
+		<dependency>
+			<groupId>commons-collections</groupId>
+			<artifactId>commons-collections</artifactId>
+			<version>3.2.1</version>
+		</dependency>
+		<dependency>
+			<groupId>commons-dbcp</groupId>
+			<artifactId>commons-dbcp</artifactId>
+			<version>1.4</version>
+		</dependency>
+		<dependency>
+			<groupId>com.gentlyweb</groupId>
+			<artifactId>gentlyweb-utils</artifactId>
+			<version>1.1</version>
+		</dependency>
+		<dependency>
+			<groupId>commons-digester</groupId>
+			<artifactId>commons-digester</artifactId>
+			<version>1.6</version>
+		</dependency>
+		<dependency>
+			<groupId>commons-discovery</groupId>
+			<artifactId>commons-discovery</artifactId>
+			<version>0.5</version>
+		</dependency>
+		<dependency>
+			<groupId>commons-fileupload</groupId>
+			<artifactId>commons-fileupload</artifactId>
+			<version>1.2.1</version>
+		</dependency>
+		<dependency>
+			<groupId>commons-io</groupId>
+			<artifactId>commons-io</artifactId>
+			<version>1.3.2</version>
+		</dependency>
+		<dependency>
+			<groupId>commons-lang</groupId>
+			<artifactId>commons-lang</artifactId>
+			<version>2.6</version>
+		</dependency>
+		<dependency>
+			<groupId>org.josql</groupId>
+			<artifactId>josql</artifactId>
+			<version>2.2</version>
+		</dependency>
+		<dependency>
+			<groupId>net.sf.json-lib</groupId>
+			<artifactId>json-lib</artifactId>
+			<version>2.4</version>
+			<classifier>jdk15</classifier>
+		</dependency>
+		<dependency>
+			<groupId>commons-logging</groupId>
+			<artifactId>commons-logging</artifactId>
+			<version>1.1.1</version>
+		</dependency>
+		<dependency>
+			<groupId>commons-pool</groupId>
+			<artifactId>commons-pool</artifactId>
+			<version>1.5.6</version>
+		</dependency>
+		<dependency>
+			<groupId>commons-validator</groupId>
+			<artifactId>commons-validator</artifactId>
+			<version>1.3.1</version>
+		</dependency>
+
+		<!-- Servlet/JSP -->
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>jstl</artifactId>
+			<version>1.1.2</version>
+		</dependency>
+		<dependency>
+			<groupId>taglibs</groupId>
+			<artifactId>standard</artifactId>
+			<version>1.1.2</version>
+		</dependency>
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>servlet-api</artifactId>
+			<version>2.4</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>jsp-api</artifactId>
+			<version>2.0</version>
+			<scope>provided</scope>
+		</dependency>
+		<!-- log4j -->
+		<dependency>
+			<groupId>log4j</groupId>
+			<artifactId>log4j</artifactId>
+			<version>1.2.17</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.httpcomponents</groupId>
+			<artifactId>httpclient</artifactId>
+			<version>4.2.3</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.channelsoft</groupId>
+			<artifactId>qframe-ws-gls</artifactId>
+			<version>1.0.3</version>
+		</dependency>
+
+		<dependency>
+			<groupId>dom4j</groupId>
+			<artifactId>dom4j</artifactId>
+			<version>1.6.1</version>
+		</dependency>
+
+		<dependency>
+			<groupId>jaxen</groupId>
+			<artifactId>jaxen</artifactId>
+			<version>1.1-beta-6</version>
+			<exclusions>
+				<exclusion>
+					<artifactId>xercesImpl</artifactId>
+					<groupId>xerces</groupId>
+				</exclusion>
+				<exclusion>
+					<artifactId>icu4j</artifactId>
+					<groupId>com.ibm.icu</groupId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+
+		<dependency>
+			<groupId>axis</groupId>
+			<artifactId>axis</artifactId>
+			<version>1.4</version>
+		</dependency>
+
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>5.1.24</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.alibaba</groupId>
+			<artifactId>fastjson</artifactId>
+			<version>1.2.58</version>
+		</dependency>
+
+		<!-- spring 定时任务依赖 -->
+		<dependency>
+			<groupId>org.opensymphony.quartz</groupId>
+			<artifactId>quartz-all</artifactId>
+			<version>1.6.1</version>
+		</dependency>
+
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.10</version>
+			<scope>test</scope>
+		</dependency>
+		<!-- redis  -->
+		<dependency>
+            <groupId>redis.clients</groupId>
+            <artifactId>jedis</artifactId>
+            <version>2.5.2</version>
+        </dependency>
+        
+        
+		<dependency>
+		  <groupId>com.channelsoft</groupId>
+		  <artifactId>qframe-webagent-nettysocket</artifactId>
+		  <version>1.1.9-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>com.channelsoft</groupId>
+			<artifactId>qframe-webagent-ucds</artifactId>
+			<version>2.0.2.4.1</version>
+		</dependency>
+		<!-- slf4j -->
+		<!-- <dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+			<version>1.7.1</version>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-log4j12</artifactId>
+			<version>1.7.1</version>
+		</dependency> 
+		-->
+		<dependency>
+		  <groupId>org.hibernate</groupId>
+		  <artifactId>hibernate-validator</artifactId>
+		  <version>4.2.0.Final</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.channelsoft</groupId>
+			<artifactId>qframe-api-filter</artifactId>
+			<version>1.0.3</version>
+		</dependency>
+		<!--kafka-->
+		<dependency>
+			<groupId>org.apache.kafka</groupId>
+			<artifactId>kafka_2.11</artifactId>
+			<version>0.8.2.2</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.channelsoft</groupId>
+			<artifactId>common</artifactId>
+			<version>1.1</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.ctcc.commons.utils</groupId>
+			<artifactId>tywh_utils</artifactId>
+			<version>0.0.1</version>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<finalName>agentProxy</finalName>
+		<plugins>
+			<plugin>
+				<groupId>org.mortbay.jetty</groupId>
+				<artifactId>jetty-maven-plugin</artifactId>
+				<configuration>
+					<webApp>
+						<contextPath>/agentProxy</contextPath>
+					</webApp>
+					<connectors>
+						<!-- <connector implementation="org.mortbay.jetty.nio.SelectChannelConnector"> -->
+						<connector implementation="org.eclipse.jetty.server.nio.SelectChannelConnector">
+							<port>8088</port>
+							<maxIdleTime>60000</maxIdleTime>
+						</connector>
+					</connectors>
+					<scanIntervalSeconds>10</scanIntervalSeconds>
+				</configuration>
+			</plugin>
+			<plugin>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>1.6</source>
+					<target>1.6</target>
+					<encoding>UTF-8</encoding>
+				</configuration>
+			</plugin>
+			<plugin>
+				<artifactId>maven-war-plugin</artifactId>
+				<version>2.4</version>
+				<configuration>
+					<warName>${project.build.finalName}</warName>
+					<packagingExcludes>
+						WEB-INF/classes/META-INF/app.properties
+					</packagingExcludes>
+					<archive>
+						<manifestEntries>
+							<GIT-Revision-SHORT>${git.commit.id.abbrev}</GIT-Revision-SHORT>
+							<GIT-Revision>${git.commit.id}</GIT-Revision>
+							<COMMIT-Date>${git.commit.time}</COMMIT-Date>
+							<BUILD-DATE>${git.build.time}</BUILD-DATE>
+							<COMMIT-USER>${git.commit.user.name}</COMMIT-USER>
+							<artifactId>${artifactId}</artifactId>
+							<GIT-URL>${git.remote.origin.url}</GIT-URL>
+							<GIT-BRANCH>${git.branch}</GIT-BRANCH>
+							<COMMIT-MESSAGE>${git.commit.message.full}</COMMIT-MESSAGE>
+							<COMMIT-ID-DESCRIBE>${git.commit.id.describe}</COMMIT-ID-DESCRIBE>
+							<version>${project.version}</version>
+							<project>${project.description}</project>
+						</manifestEntries>
+					</archive>
+				</configuration>
+			</plugin>
+
+			<plugin>
+				<groupId>pl.project13.maven</groupId>
+				<artifactId>git-commit-id-plugin</artifactId>
+				<version>2.1.5</version>
+				<executions>
+					<execution>
+						<goals>
+							<goal>revision</goal>
+						</goals>
+						<!-- <phase>process-sources</phase> -->
+					</execution>
+				</executions>
+				<configuration>
+					<!--日期格式;默认值:dd.MM.yyyy '@' HH:mm:ss z;-->
+					<dateFormat>yyyy-MM-dd HH:mm:ss</dateFormat>
+					<!--,构建过程中,是否打印详细信息;默认值:false;-->
+					<verbose>true</verbose>
+					<!-- ".git"文件路径;默认值:${project.basedir}/.git; -->
+					<dotGitDirectory>${project.basedir}/.git</dotGitDirectory>
+					<!--若项目打包类型为pom,是否取消构建;默认值:true;-->
+					<skipPoms>false</skipPoms>
+					<!--是否生成"git.properties"文件;默认值:false;-->
+					<generateGitPropertiesFile>false</generateGitPropertiesFile>
+					<!--指定"git.properties"文件的存放路径(相对于${project.basedir}的一个路径);-->
+					<!--<generateGitPropertiesFilename>target/classes/git.properties</generateGitPropertiesFilename>-->
+					<!--".git"文件夹未找到时,构建是否失败;若设置true,则构建失败;若设置false,则跳过执行该目标;默认值:true;-->
+					<failOnNoGitDirectory>true</failOnNoGitDirectory>
+
+					<!--git描述配置,可选;由JGit提供实现;-->
+					<gitDescribe>
+						<!--是否生成描述属性-->
+						<skip>false</skip>
+						<!--提交操作未发现tag时,仅打印提交操作ID,-->
+						<always>false</always>
+						<!--提交操作ID显式字符长度,最大值为:40;默认值:7;
+                          0代表特殊意义;后面有解释;
+                        -->
+						<abbrev>7</abbrev>
+						<!--构建触发时,代码有修改时(即"dirty state"),添加指定后缀;默认值:"";-->
+						<dirty>-dirty</dirty>
+						<!--always print using the "tag-commits_from_tag-g_commit_id-maybe_dirty" format, even if "on" a tag.
+                          The distance will always be 0 if you're "on" the tag.
+                        -->
+						<forceLongFormat>false</forceLongFormat>
+					</gitDescribe>
+				</configuration>
+			</plugin>
+		</plugins>
+
+	</build>
+</project>
