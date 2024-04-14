@@ -30,7 +30,7 @@
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-webmvc</artifactId>
-			<version>3.1.2.RELEASE</version>
+			<version>5.3.34</version>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework</groupId>
@@ -203,7 +203,7 @@
 			<version>1.2.58</version>
 		</dependency>
 
-		<!-- spring ¶¨Ê±ÈÎÎñÒÀÀµ -->
+		<!-- spring å®šæ—¶ä»»åŠ¡ä¾èµ– -->
 		<dependency>
 			<groupId>org.opensymphony.quartz</groupId>
 			<artifactId>quartz-all</artifactId>
@@ -345,32 +345,32 @@
 					</execution>
 				</executions>
 				<configuration>
-					<!--ÈÕÆÚ¸ñÊ½;Ä¬ÈÏÖµ:dd.MM.yyyy '@' HH:mm:ss z;-->
+					<!--æ—¥æœŸæ ¼å¼;é»˜è®¤å€¼:dd.MM.yyyy '@' HH:mm:ss z;-->
 					<dateFormat>yyyy-MM-dd HH:mm:ss</dateFormat>
-					<!--,¹¹½¨¹ý³ÌÖÐ,ÊÇ·ñ´òÓ¡ÏêÏ¸ÐÅÏ¢;Ä¬ÈÏÖµ:false;-->
+					<!--,æž„å»ºè¿‡ç¨‹ä¸­,æ˜¯å¦æ‰“å°è¯¦ç»†ä¿¡æ¯;é»˜è®¤å€¼:false;-->
 					<verbose>true</verbose>
-					<!-- ".git"ÎÄ¼þÂ·¾¶;Ä¬ÈÏÖµ:${project.basedir}/.git; -->
+					<!-- ".git"æ–‡ä»¶è·¯å¾„;é»˜è®¤å€¼:${project.basedir}/.git; -->
 					<dotGitDirectory>${project.basedir}/.git</dotGitDirectory>
-					<!--ÈôÏîÄ¿´ò°üÀàÐÍÎªpom,ÊÇ·ñÈ¡Ïû¹¹½¨;Ä¬ÈÏÖµ:true;-->
+					<!--è‹¥é¡¹ç›®æ‰“åŒ…ç±»åž‹ä¸ºpom,æ˜¯å¦å–æ¶ˆæž„å»º;é»˜è®¤å€¼:true;-->
 					<skipPoms>false</skipPoms>
-					<!--ÊÇ·ñÉú³É"git.properties"ÎÄ¼þ;Ä¬ÈÏÖµ:false;-->
+					<!--æ˜¯å¦ç”Ÿæˆ"git.properties"æ–‡ä»¶;é»˜è®¤å€¼:false;-->
 					<generateGitPropertiesFile>false</generateGitPropertiesFile>
-					<!--Ö¸¶¨"git.properties"ÎÄ¼þµÄ´æ·ÅÂ·¾¶(Ïà¶ÔÓÚ${project.basedir}µÄÒ»¸öÂ·¾¶);-->
+					<!--æŒ‡å®š"git.properties"æ–‡ä»¶çš„å­˜æ”¾è·¯å¾„(ç›¸å¯¹äºŽ${project.basedir}çš„ä¸€ä¸ªè·¯å¾„);-->
 					<!--<generateGitPropertiesFilename>target/classes/git.properties</generateGitPropertiesFilename>-->
-					<!--".git"ÎÄ¼þ¼ÐÎ´ÕÒµ½Ê±,¹¹½¨ÊÇ·ñÊ§°Ü;ÈôÉèÖÃtrue,Ôò¹¹½¨Ê§°Ü;ÈôÉèÖÃfalse,ÔòÌø¹ýÖ´ÐÐ¸ÃÄ¿±ê;Ä¬ÈÏÖµ:true;-->
+					<!--".git"æ–‡ä»¶å¤¹æœªæ‰¾åˆ°æ—¶,æž„å»ºæ˜¯å¦å¤±è´¥;è‹¥è®¾ç½®true,åˆ™æž„å»ºå¤±è´¥;è‹¥è®¾ç½®false,åˆ™è·³è¿‡æ‰§è¡Œè¯¥ç›®æ ‡;é»˜è®¤å€¼:true;-->
 					<failOnNoGitDirectory>true</failOnNoGitDirectory>
 
-					<!--gitÃèÊöÅäÖÃ,¿ÉÑ¡;ÓÉJGitÌá¹©ÊµÏÖ;-->
+					<!--gitæè¿°é…ç½®,å¯é€‰;ç”±JGitæä¾›å®žçŽ°;-->
 					<gitDescribe>
-						<!--ÊÇ·ñÉú³ÉÃèÊöÊôÐÔ-->
+						<!--æ˜¯å¦ç”Ÿæˆæè¿°å±žæ€§-->
 						<skip>false</skip>
-						<!--Ìá½»²Ù×÷Î´·¢ÏÖtagÊ±,½ö´òÓ¡Ìá½»²Ù×÷ID,-->
+						<!--æäº¤æ“ä½œæœªå‘çŽ°tagæ—¶,ä»…æ‰“å°æäº¤æ“ä½œID,-->
 						<always>false</always>
-						<!--Ìá½»²Ù×÷IDÏÔÊ½×Ö·û³¤¶È,×î´óÖµÎª:40;Ä¬ÈÏÖµ:7;
-                          0´ú±íÌØÊâÒâÒå;ºóÃæÓÐ½âÊÍ;
+						<!--æäº¤æ“ä½œIDæ˜¾å¼å­—ç¬¦é•¿åº¦,æœ€å¤§å€¼ä¸º:40;é»˜è®¤å€¼:7;
+                          0ä»£è¡¨ç‰¹æ®Šæ„ä¹‰;åŽé¢æœ‰è§£é‡Š;
                         -->
 						<abbrev>7</abbrev>
-						<!--¹¹½¨´¥·¢Ê±,´úÂëÓÐÐÞ¸ÄÊ±(¼´"dirty state"),Ìí¼ÓÖ¸¶¨ºó×º;Ä¬ÈÏÖµ:"";-->
+						<!--æž„å»ºè§¦å‘æ—¶,ä»£ç æœ‰ä¿®æ”¹æ—¶(å³"dirty state"),æ·»åŠ æŒ‡å®šåŽç¼€;é»˜è®¤å€¼:"";-->
 						<dirty>-dirty</dirty>
 						<!--always print using the "tag-commits_from_tag-g_commit_id-maybe_dirty" format, even if "on" a tag.
                           The distance will always be 0 if you're "on" the tag.
